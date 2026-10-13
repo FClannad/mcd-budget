@@ -1,0 +1,120 @@
+.live-search-form { display: grid; grid-template-columns: 1fr 1.5fr 1.2fr auto; gap: 16px; align-items: end; margin: 26px 0 18px; }
+.live-search-form input, .live-panel input, .live-panel select { display: block; width: 100%; min-width: 0; margin-top: 8px; border: 1px solid #dcd6c9; border-radius: 8px; padding: 11px 12px; background: #fffdf9; color: #292b26; font: inherit; }
+.live-pickup { align-self: center; font-size: 13px; }
+.live-pickup small { display: block; color: #6d7066; font-size: 11px; margin-top: 6px; }
+.live-status { color: #486345; font-size: 13px; line-height: 1.8; }
+.live-stores { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 20px 0 30px; }
+.live-store-card { min-width: 0; padding: 20px; border: 1px solid #ded8cc; border-radius: 12px; background: #fffdf8; }
+.live-store-card h3 { margin: 0 0 10px; font-size: 15px; line-height: 1.6; }
+.live-store-card p { font-size: 12px; margin: 8px 0; }
+.live-store-card details { font-size: 11px; margin: 12px 0; }
+.live-store-card .secondary-button { margin-top: 12px; }
+.live-code { color: #71746a; font-size: 10px; }
+.live-store-heading, .live-saved-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px; }
+.live-store-heading h2 { font-size: 22px; margin: 6px 0; }
+.live-store-heading .muted { font-size: 12px; line-height: 1.9; }
+.live-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.live-panel { padding: 26px; border: 1px solid #ded8cc; border-radius: 16px; background: #fffdf9; min-width: 0; }
+.live-panel .panel-heading { margin-bottom: 20px; }
+.live-panel .panel-heading h2 { font-size: 20px; }
+.live-menu-filters, .live-budget-fields { display: grid; grid-template-columns: 1.5fr 1fr; gap: 12px; margin-bottom: 16px; }
+.live-menu-filters label { font-size: 12px; min-width: 0; }
+.live-products { max-height: 345px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #e8e2d7; border-radius: 10px; }
+.live-product { width: 100%; display: flex; text-align: left; align-items: center; justify-content: space-between; gap: 14px; padding: 14px; border: 0; border-bottom: 1px solid #eee8dd; background: transparent; cursor: pointer; }
+.live-product:hover, .live-product.selected { background: #f5ecd0; }
+.live-product strong { font-size: 13px; line-height: 1.8; }
+.live-product small { display: block; font-size: 10px; color: #73756a; margin-top: 5px; }
+.live-reference { text-align: right; flex-shrink: 0; font-size: 15px; }
+.live-detail-form { margin-top: 22px; padding-top: 20px; border-top: 1px dashed #dcd6c9; }
+.live-detail-form h3 { font-size: 18px; margin: 0 0 8px; }
+.live-detail-form .muted { font-size: 12px; line-height: 1.8; }
+.live-detail-form .field-label { margin: 15px 0; }
+.live-detail-form #live-quantity { max-width: 110px; }
+.live-detail-form select { white-space: normal; max-width: 100%; }
+.live-basket { border-top: 1px solid #e8e2d7; margin: 20px 0; }
+.live-basket > .muted { font-size: 13px; padding: 20px 0; }
+.live-basket-line { display: grid; grid-template-columns: minmax(0, 1fr) 65px auto; gap: 14px; align-items: center; padding: 16px 0; border-bottom: 1px solid #e8e2d7; }
+.live-basket-line strong { font-size: 14px; }
+.live-basket-line p { font-size: 11px; color: #6d7066; margin: 7px 0 0; line-height: 1.8; }
+.live-basket-line label { font-size: 10px; }
+.live-basket-line input { padding: 8px; }
+#live-quote { width: 100%; margin-top: 12px; }
+.live-current { margin-top: 22px; }
+.live-current > .muted { font-size: 13px; }
+.live-quote-card { padding: 20px; background: #eef3e7; border: 1px solid #d7e0cb; border-radius: 12px; overflow-wrap: anywhere; }
+.live-quote-card.over-budget { background: #fff1e8; border-color: #ecd0bd; }
+.live-quote-card.is-expired { background: #f0ede8; border-color: #d8d5cd; }
+.live-quote-status { font-size: 13px; font-weight: 700; margin: 10px 0; }
+.live-total { font-size: 38px; letter-spacing: -1px; }
+.live-quote-card > p, .live-quote-card > .muted { font-size: 12px; }
+.live-quote-lines { list-style: none; padding: 0; margin: 20px 0; }
+.live-quote-lines li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 12px; padding: 10px 0; border-bottom: 1px dashed #cdd6c3; font-size: 12px; }
+.live-quote-lines small { grid-column: 1 / -1; font-size: 10px; line-height: 1.9; color: #676b61; }
+.live-breakdown { font-size: 11px; margin: 16px 0; }
+.live-breakdown div { display: flex; justify-content: space-between; gap: 10px; margin: 9px 0; }
+.live-breakdown dd { margin: 0; flex-shrink: 0; }
+.live-timestamp { color: #526b49; font-size: 10px !important; line-height: 1.9; }
+.live-result-actions { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+.live-comparison { margin: 35px 0; }
+.live-comparisons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.live-saved-heading { margin-bottom: 5px; }
+.live-saved-heading h3 { font-size: 16px; }
+.live-difference { font-size: 12px; line-height: 1.8; min-height: 44px; }
+#live-view button:disabled { opacity: .5; cursor: not-allowed; }
+#live-view :is(input, select, button):focus-visible { outline: 3px solid #92753d; outline-offset: 3px; }
+.live-products > .muted { padding: 15px; font-size: 12px; }
+.live-auto { margin: 24px 0 34px; border-top: 4px solid #416443; }
+.live-auto-fields { display: grid; grid-template-columns: 1fr .65fr 1fr auto; align-items: end; gap: 16px; }
+.live-auto-fields .primary-button { min-height: 44px; }
+.live-auto-toggles { display: flex; gap: 22px; flex-wrap: wrap; margin: 20px 0 12px; }
+.live-auto-toggles label { display: flex; align-items: center; gap: 9px; font-size: 13px; cursor: pointer; }
+.live-auto-toggles input { display: inline-block; width: 17px; height: 17px; margin: 0; padding: 0; accent-color: #416443; }
+.live-recommend-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 20px 0; align-items: start; }
+.live-recommendation { min-width: 0; overflow-wrap: anywhere; }
+.live-recommend-heading { display: flex; gap: 12px; align-items: center; margin: 8px 0 12px; }
+.live-recommend-heading h3 { font-size: 16px; line-height: 1.6; margin: 0; }
+.live-rank { display: grid; place-items: center; flex-shrink: 0; min-width: 34px; height: 34px; border-radius: 50%; background: #314b35; color: #fff; font-size: 13px; font-weight: 700; }
+.live-coupon-badge { display: inline-block; border-radius: 5px; background: #fff8dd; padding: 6px 9px; line-height: 1.8; font-size: 11px; }
+.live-coupon-comparison { line-height: 1.8; color: #405940; }
+.live-bill { margin-top: 16px; font-size: 12px; }
+.live-bill summary { cursor: pointer; font-weight: 700; }
+.live-recommend-warning, .live-over-heading { padding: 14px 16px; background: #fff3de; border-radius: 8px; font-size: 12px; line-height: 1.9; }
+.live-recommend-warning ul { margin: 0; padding-left: 16px; }
+.live-coupon-panel { padding-top: 24px; margin-top: 26px; border-top: 1px dashed #dcd6c9; }
+.live-coupon-panel h3 { margin: 0 0 10px; font-size: 19px; }
+.live-coupon-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.live-coupon-offer { min-width: 0; overflow-wrap: anywhere; padding: 16px; border: 1px solid #e8dfc4; border-radius: 10px; background: #fbf5e5; }
+.live-coupon-offer h4 { margin: 0 0 10px; font-size: 14px; }
+.live-coupon-offer p { font-size: 12px; line-height: 1.9; margin: 8px 0; }
+.live-coupon-offer .live-coupon-total { font-weight: 700; color: #3c553d; }
+.live-manual-heading { margin: 32px 0 20px; }
+.live-manual-heading h2 { font-size: 23px; }
+@media (max-width: 1050px) {
+  .site-header { flex-wrap: wrap; gap: 18px; }
+  .main-nav { gap: 16px; }
+  .live-search-form { grid-template-columns: 1fr 1fr; }
+  .live-comparisons { grid-template-columns: 1fr; }
+  .live-auto-fields { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 750px) {
+  .live-layout { grid-template-columns: 1fr; }
+  .live-panel { padding: 22px; }
+  .live-store-heading { align-items: start; flex-direction: column; }
+  .live-store-heading h2 { font-size: 19px; }
+  .live-recommend-grid, .live-coupon-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .main-nav { gap: 13px; width: 100%; justify-content: space-between; }
+  .main-nav .nav-item { font-size: 11px; }
+  .live-search-form { gap: 12px; }
+  .live-search-form .primary-button { font-size: 11px; padding: 12px; }
+  .live-pickup { font-size: 11px; }
+  .live-pickup small { font-size: 10px; }
+  .live-panel { padding: 18px; }
+  .live-basket-line { gap: 8px; grid-template-columns: minmax(0, 1fr) 54px auto; }
+  .live-menu-filters { grid-template-columns: 1fr; }
+  .live-reference { max-width: 110px; overflow-wrap: anywhere; font-size: 13px; }
+  .live-quote-card { padding: 16px; }
+  .live-auto-fields { gap: 12px; }
+  .live-auto-fields .primary-button { font-size: 11px; padding: 12px 9px; }
+}

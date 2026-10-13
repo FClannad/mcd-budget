@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+/CONTEST_DECLARATION.md -text
+/docs/upstream/*.md -text

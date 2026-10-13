@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ee">
+  <meta name="description" content="麦麦不超支：先定预算，再选餐单。不为凑单多买，每一笔都算清。当前预算页使用明确标记的固定演示数据。">
+  <title>麦麦不超支 · 预算是上限，不是目标</title>
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/live.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#planner">跳到预算表单</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="麦麦不超支首页"><img src="/assets/icon.svg" alt="" width="40" height="40"><span>麦麦不超支<small>THE LITTLE BUDGET CLUB</small></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-item active" data-nav="planner" aria-current="page">预算实验室</button>
+        <button class="nav-item" data-nav="live">真实预算</button>
+        <button class="nav-item" data-nav="mcp">MCP 工作台</button>
+        <button class="nav-item" data-nav="about">关于作品</button>
+      </nav>
+      <span class="mode-badge"><i></i>本地只读版<span class="version"> / 0.1</span></span>
+    </header>
+
+    <main>
+      <section data-view="planner" id="planner-view">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="mini-rule"></span> SMALL BUDGET, GOOD LUNCH.</p>
+            <h1>吃得刚刚好。<br>预算，<span>不超标。</span><svg class="hand-star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l2 11L33 8l-6 12 11 2-12 4 5 10-11-7-6 9 1-12-12-2 12-6-5-9 10 6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></h1>
+            <p class="hero-description">先定预算，再选餐单。<br>优惠可以用，但不为凑单多买一份。</p>
+            <div class="hero-promises"><span>✓ 每一笔都算清</span><span>✓ 不自动下单</span><span>✓ 数据来源透明</span></div>
+          </div>
+          <div class="hero-visual"><img src="/assets/hero.svg" alt="手绘汉堡、饮品与薯条放在餐盘上" width="580" height="350"><span class="hero-note">把选择题，变简单一点。</span></div>
+        </div>
+
+        <div class="source-notice"><span class="notice-label">DEMO DATA</span><p>现在看到的是<strong>固定演示菜单与价格</strong>，不代表麦当劳实际售价、门店或优惠。</p><button data-nav="mcp">查看真实接口接入 <span aria-hidden="true">↗</span></button></div>
+
+        <div class="workspace">
+          <aside class="planner-panel" id="planner">
+            <form id="budget-form">
+              <div class="panel-heading"><span class="step-number">01</span><div><h2>这顿，怎么吃？</h2><p>告诉我你的底线，剩下的交给计算。</p></div></div>
+              <label class="field-label" for="budget">人均预算 <span>预算是上限，不是花完的目标</span></label>
+              <div class="budget-input"><span aria-hidden="true">¥</span><input id="budget" name="budget" type="number" min="1" max="500" step="0.01" value="25" required inputmode="decimal" aria-label="人均预算，单位元"><span>/ 人</span></div>
+              <input id="budget-range" class="budget-range" type="range" min="10" max="60" step="1" value="25" aria-label="快捷调整人均预算">
+              <div class="budget-presets" aria-label="预算快捷选项"><button type="button" data-budget="15">¥15</button><button type="button" data-budget="20">¥20</button><button type="button" data-budget="25" class="selected" aria-pressed="true">¥25</button><button type="button" data-budget="30">¥30</button></div>
+              <div class="form-divider"></div>
+              <div class="people-row"><label class="field-label" for="people">几个人吃</label><div class="stepper"><button type="button" id="people-minus" aria-label="减少用餐人数" disabled>−</button><output id="people" aria-live="polite">1</output><button type="button" id="people-plus" aria-label="增加用餐人数">+</button></div></div>
+              <p class="people-hint">多人按每人同一组合、合为一单计算。</p>
+              <label class="field-label" for="main-kind">主食偏好</label>
+              <select id="main-kind" name="mainKind"><option value="any">都可以，看看哪份合适</option><option value="chicken">鸡肉汉堡</option><option value="beef">牛肉汉堡</option><option value="fish">鱼肉汉堡</option></select>
+              <div class="check-options"><label><input type="checkbox" id="want-drink" checked><span>搭一杯饮品</span><span class="option-icon" aria-hidden="true">🥤</span></label><label><input type="checkbox" id="want-side"><span>再来一份小食</span><span class="option-icon" aria-hidden="true">🍟</span></label></div>
+              <label class="coupon-toggle"><input type="checkbox" id="use-coupons" checked><span>允许使用演示满减券<small>每单最多一张，不叠加</small></span><span class="toggle-decoration" aria-hidden="true"></span></label>
+              <button class="primary-button plan-button" type="submit" id="plan-button"><span>帮我算一顿</span><span aria-hidden="true">→</span></button>
+              <div class="form-footnote"><span class="small-dot"></span>只做选择，不替你下单付款</div>
+              <p id="form-error" class="error-text" role="alert" hidden></p>
+            </form>
+          </aside>
+
+          <section class="results-panel" aria-labelledby="results-title">
+            <div class="results-heading"><div><p class="section-kicker">YOUR LUNCH, SORTED.</p><h2 id="results-title">今天的预算内选择<span id="plan-count"></span></h2></div><button class="text-button" id="menu-button">看看演示菜单 <span aria-hidden="true">↗</span></button></div>
+            <div class="results-meta"><span id="results-summary" role="status">正在计算你的第一份餐单…</span><span class="store-label"><span aria-hidden="true">⌖</span> 街角演示餐厅</span></div>
+            <p id="stale-notice" class="stale-notice" hidden>条件已调整，点击「帮我算一顿」更新下方结果。</p>
+            <div id="plan-cards" class="plan-cards" aria-busy="true"></div>
+            <div id="empty-state" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">↗</span><h3>这份预算，暂时配不出来。</h3><p id="empty-message"></p><p class="muted">不偷偷加预算，也不推荐你没选的东西。</p><button class="secondary-button" id="minimum-button" type="button"></button></div>
+            <div id="top-up" class="top-up" hidden></div>
+            <div class="result-footnote"><span aria-hidden="true">ⓘ</span><p>先取每种主食的最低价组合，再展示最多 3 种选择。<br>仅比较当前演示候选，不承诺全菜单或跨渠道最低价。</p></div>
+          </section>
+        </div>
+        <section class="principles-strip" aria-label="我们的原则"><div><span>01 /</span><p>预算先行<small>省下来的，也属于你。</small></p></div><div><span>02 /</span><p>拒绝假省钱<small>看实付差额，不只看优惠数字。</small></p></div><div><span>03 /</span><p>选择权在你<small>不领券、不下单、不替你付款。</small></p></div></section>
+      </section>
+
+      <section data-view="live" id="live-view" class="secondary-view" hidden>
+        <p class="eyebrow">REAL MENU. CHECK BEFORE YOU CHOOSE.</p>
+        <h1>真实门店，<span>从低到高选。</span></h1>
+        <p class="view-lead">选好门店，告诉我预算。自动搭配主食与饮品，参考本店可用券，按官方实付价从低到高推荐；也可以自己选餐比较。</p>
+        <div class="source-notice live-notice"><span class="notice-label">MCP · 只读</span><p>只排序<strong>官方核价成功的候选</strong>，不承诺全菜单最低价。有券不一定整顿更便宜；不领券、不下单、不锁价。</p></div>
+        <form id="live-search-form" class="live-search-form">
+          <label class="field-label" for="live-city">城市<input id="live-city" value="上海" maxlength="60" required autocomplete="off"></label>
+          <label class="field-label" for="live-keyword">附近公共地标<input id="live-keyword" value="人民广场" maxlength="100" required autocomplete="off"></label>
+          <div class="live-pickup">到店自取 · 当前时段<small>不读取收藏或家庭地址</small></div>
+          <button id="live-search" class="primary-button" disabled>查询真实门店 →</button>
+        </form>
+        <p id="live-status" class="live-status" role="status">正在检查本地服务…</p>
+        <p id="live-error" class="error-text" role="alert" hidden></p>
+        <div id="live-stores" class="live-stores" aria-label="查询返回的门店"></div>
+        <div id="live-workspace" hidden>
+          <div class="live-store-heading"><div><p class="section-kicker">当前门店 / 到店自取</p><h2 id="live-store-title"></h2><p id="live-menu-meta" class="muted"></p></div><button id="live-refresh" class="text-button">重新搜索并选店 ↻</button></div>
+          <section class="live-panel live-auto" aria-labelledby="live-auto-title">
+            <div class="panel-heading"><span class="step-number">↗</span><div><h2 id="live-auto-title">不用自己凑，先看实付最低的。</h2><p>比较有限套餐和单点组合，最多展示 5 份预算内方案。</p></div></div>
+            <form id="live-budget-form">
+              <div class="live-auto-fields">
+                <label class="field-label" for="live-budget">人均预算 / 元<input id="live-budget" type="number" min="1" max="500" step="0.01" value="25" required></label>
+                <label class="field-label" for="live-people">人数<input id="live-people" type="number" min="1" max="6" step="1" value="1" required></label>
+                <label class="field-label" for="live-main-kind">主食偏好<select id="live-main-kind"><option value="any">都可以</option><option value="chicken">鸡肉</option><option value="beef">牛肉</option><option value="fish">鱼肉</option></select></label>
+                <button id="live-recommend" class="primary-button" disabled>自动推荐 · 实付从低到高 →</button>
+              </div>
+              <div class="live-auto-toggles"><label><input id="live-want-drink" type="checkbox" checked> 每人包含饮品</label><label><input id="live-use-coupons" type="checkbox" checked> 参考本店可用券</label></div>
+              <p class="privacy-note">点击后查询当前账号在本店、自取渠道可用的券，仅用于核价，不领取或消耗券。多人按相同餐单核价，不复用一张券。偏好按餐品名称筛选，不作过敏原或营养保证。</p>
+            </form>
+            <p id="live-recommend-status" class="live-status" role="status">选好预算后点自动推荐；未核价的菜单标价不会参与排序。</p>
+            <div id="live-recommend-results"></div>
+            <div id="live-coupon-results"></div>
+          </section>
+          <div class="live-manual-heading"><p class="section-kicker">也可以自己搭配</p><h2>想换一份？手动选餐核价。</h2><p class="muted">沿用上方预算与人数；手动核价不套用个人券。</p></div>
+          <div class="live-layout">
+            <section class="live-panel" aria-labelledby="live-menu-title">
+              <div class="panel-heading"><span class="step-number">01</span><div><h2 id="live-menu-title">从真实菜单选餐</h2><p>仅显示此次门店返回；价格原文不是核价。</p></div></div>
+              <div class="live-menu-filters"><label for="live-filter">搜索餐品<input id="live-filter" type="search" placeholder="例如：汉堡、随心配、可乐" autocomplete="off"></label><label for="live-category">分类<select id="live-category"><option value="">全部分类</option></select></label></div>
+              <div id="live-products" class="live-products"></div>
+              <form id="live-detail-form" class="live-detail-form" hidden>
+                <h3 id="live-detail-title"></h3><p id="live-detail-note" class="muted"></p>
+                <div id="live-options"></div>
+                <label class="field-label" for="live-quantity">每人几份<input id="live-quantity" type="number" value="1" min="1" max="6" step="1" required></label>
+                <button id="live-add" class="secondary-button">加入每人餐单 +</button>
+                <p class="privacy-note">【可特调】表示官方支持；本页仅使用原配方，不展示或修改特调。如需查看特调，请在 MCP 工作台查询详情。</p>
+              </form>
+            </section>
+            <section class="live-panel" aria-labelledby="live-basket-title">
+              <div class="panel-heading"><span class="step-number">02</span><div><h2 id="live-basket-title">这一份，预算多少？</h2><p>每人同一餐单，合为一单核价。</p></div></div>
+                <div id="live-basket" class="live-basket"><p class="muted">还没有选餐。先点击左侧餐品，查看并确认规格。</p></div>
+                <p class="privacy-note">每人限 8 种、共 12 份。同一餐品仅一种规格；手动核价不会自动加餐、领券或读取个人券。</p>
+                <button id="live-quote" form="live-budget-form" class="primary-button" disabled>仅核价，不下单 →</button>
+              <div id="live-current" class="live-current" aria-live="polite"><p class="muted">没有有效核价。菜单标价不会被当作实付。</p></div>
+              <div class="live-result-actions"><button id="live-save" class="secondary-button" disabled>保存为对比方案</button><button id="live-copy" class="text-button" disabled>复制核价记录 ↗</button></div>
+            </section>
+          </div>
+          <section class="live-comparison" aria-labelledby="live-compare-title"><div class="live-store-heading"><div><p class="section-kicker">只比较你选过的餐单</p><h2 id="live-compare-title">少花多少，看总价。</h2><p class="muted">保存方案是本页内存操作，不是保存订单。换门店、预算或人数会清空对比。</p></div><button id="live-clear" class="text-button" hidden>清空对比</button></div><div id="live-comparisons" class="live-comparisons"></div></section>
+        </div>
+      </section>
+
+      <section data-view="mcp" id="mcp-view" class="secondary-view" hidden>
+        <p class="eyebrow">REAL DATA, CLEAR BOUNDARIES.</p><h1>真实接口，<span>明明白白。</span></h1><p class="view-lead">这是只读 MCP 联调工作台。读取服务端真实参数，再由你发起查询。<br>选店、选餐和官方核价请用「真实预算」；此处原始返回不自动加入餐单，也不回退演示价格。</p>
+        <div class="mcp-layout"><aside class="connection-card"><span class="connection-icon" aria-hidden="true">↗</span><h2>连接麦当劳 MCP</h2><code>https://mcp.mcd.cn</code><p id="mcp-connection-status" class="connection-status">正在检查本地配置…</p><ol><li>在项目根目录把 <code>.env.example</code> 复制为 <code>.env</code>。</li><li>仅在本地填写 <code>MCD_MCP_TOKEN</code>，然后重启服务。</li><li>点击连接，读取真实的工具参数。</li></ol><button id="mcp-connect" class="primary-button">连接并读取工具 <span aria-hidden="true">→</span></button><p class="privacy-note">Token 不在网页填写、不存浏览器，也不会发往其他地址。此工作台只允许 6 个查询／核价工具。</p><p id="mcp-error" class="error-text" role="alert" hidden></p></aside>
+        <div class="mcp-editor"><div class="panel-heading"><span class="step-number">02</span><div><h2>调用一个只读工具</h2><p>参数以服务端返回的 JSON Schema 为准。</p></div></div><label class="field-label" for="mcp-tool">选择工具</label><select id="mcp-tool" disabled><option>先连接，获取真实工具列表</option></select><details class="schema-details"><summary>查看工具说明与参数 Schema</summary><p id="mcp-tool-description"></p><pre id="mcp-schema">连接后显示，不预设或猜测接口字段。</pre></details><label class="field-label" for="mcp-args">请求参数 JSON <span>此处不要填 Token</span></label><textarea id="mcp-args" rows="8" spellcheck="false" disabled>{}</textarea><button id="mcp-call" class="secondary-button" disabled>执行只读查询</button><div class="output-heading"><h3>原始工具返回</h3><span id="mcp-result-status" role="status">尚未调用</span></div><pre id="mcp-output" class="mcp-output">工具响应只在当前页面显示，不自动保存到账户、文件或演示菜单。</pre></div></div>
+      </section>
+
+      <section data-view="about" id="about-view" class="secondary-view" hidden>
+        <p class="eyebrow">SMALL TOOL. REAL INTENTION.</p><h1>少一点营销，<span>多一点算账。</span></h1><p class="view-lead">麦麦不超支，是一个从「这一顿到底要花多少」出发的小作品。<br>没有付款按钮，也不把预算上限当作消费目标。</p>
+        <div class="about-grid"><article><span class="step-number">01</span><h2>现在可以用什么</h2><p>按预算自动搭配真实餐单，参考本店可用券，按官方实付从低到高推荐；也支持手动选餐、规格确认、对比与文本复制。离线实验室另有演示凑单比较和带水印导出。</p></article><article><span class="step-number">02</span><h2>我们明确没做什么</h2><p>已验证一家门店的到店自取流程；仅比较本轮有限候选，不保证所有餐品可适配、全部券规则或全局最低价。不复用一张券给多人，不特调、不领券、不下单或支付。</p></article><article><span class="step-number">03</span><h2>接下来怎么参赛</h2><p>真实只读联调记录已补齐；仍需本人审阅敏感信息、声明和最新规则，再公开仓库与报名。没有虚构 WorkBuddy 开发记录，也没有代为提交。</p></article></div>
+        <div class="about-note"><h2>给接手这个作品的人</h2><p>根目录的 <code>README.md</code> 是启动指南，<code>SKILL.md</code> 是给智能体的操作说明，<code>MCP_INTEGRATION.md</code> 记录接入边界。参赛清单在 <code>docs/SUBMISSION.md</code>。</p><a class="text-button" href="https://github.com/M-China/mcd-developer-innovation-challenge" target="_blank" rel="noopener noreferrer">前往官方活动仓库 ↗</a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><p><img src="/assets/icon.svg" alt="" width="23" height="23">麦麦不超支 <span>预算是上限，不是目标。</span></p><span>独立参赛作品 · 非麦当劳官方产品 · 本地运行</span></footer>
+  </div>
+
+  <dialog id="receipt-dialog" aria-labelledby="receipt-title"><button class="dialog-close" data-close="receipt-dialog" aria-label="关闭餐单">×</button><div id="receipt-content"></div><div class="receipt-actions"><button id="copy-receipt" class="secondary-button">复制餐单</button><button id="download-receipt" class="primary-button">保存餐单图片 ↗</button></div><p class="dialog-note">仅导出本地图片，不下单、不上传任何数据。</p></dialog>
+  <dialog id="menu-dialog" aria-labelledby="menu-title"><button class="dialog-close" data-close="menu-dialog" aria-label="关闭演示菜单">×</button><p class="section-kicker">DEMO MENU</p><h2 id="menu-title">一份透明的演示菜单</h2><p class="muted">以下全部为项目自建样例，不是官方在售数据。</p><div id="menu-content"></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p class="noscript-message">本地预算计算界面需要启用 JavaScript；也可以通过 node scripts/plan.mjs 使用命令行版本。</p></noscript>
+</body>
+</html>

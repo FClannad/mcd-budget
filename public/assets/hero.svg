@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="350" viewBox="0 0 580 350" fill="none">
+<defs><pattern id="dots" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#c6a767" opacity=".23"/></pattern><symbol id="burger" viewBox="0 0 200 180"><ellipse cx="100" cy="150" rx="77" ry="13" fill="#322019" opacity=".10"/>
+<path d="M30 125h140v8c0 15-24 22-70 22s-70-7-70-22z" fill="#e8a34e" stroke="#74392d" stroke-width="3"/>
+<path d="M31 114q-5 12 9 17h120q15-5 9-17z" fill="#774335" stroke="#5f3028" stroke-width="3"/>
+<path d="M30 107l22-5 26 4 24-7 22 6 27-4 20 8-18 13-28-2-26 8-24-10-24 4z" fill="#f4c74d" stroke="#b88622" stroke-width="2"/>
+<path d="M26 98q8-10 19-4 12-12 24-2 14-12 29-3 14-9 27 1 15-8 27 1 16-4 23 8l-8 10-22-3-18 6-23-8-26 8-22-7-22 5z" fill="#6e994b" stroke="#47733b" stroke-width="2.5"/>
+<path d="M30 85c2-41 32-65 70-65s68 24 70 65c0 12-140 12-140 0z" fill="#f1b767" stroke="#96502e" stroke-width="3"/>
+<path d="M41 70c10-27 32-39 59-39 20 0 37 5 49 19" fill="none" stroke="#ffdf9c" stroke-width="6" stroke-linecap="round"/>
+<g fill="#fff0ca"><ellipse cx="69" cy="54" rx="5" ry="2.4" transform="rotate(-25 69 54)"/><ellipse cx="111" cy="45" rx="5" ry="2.4" transform="rotate(24 111 45)"/><ellipse cx="138" cy="67" rx="5" ry="2.4" transform="rotate(-32 138 67)"/><ellipse cx="94" cy="73" rx="5" ry="2.4" transform="rotate(14 94 73)"/><ellipse cx="52" cy="76" rx="4" ry="2.2"/></g></symbol><symbol id="drink" viewBox="0 0 200 180"><ellipse cx="99" cy="161" rx="47" ry="8" fill="#322019" opacity=".1"/>
+<path d="M107 47l8-36h25" fill="none" stroke="#7f342d" stroke-width="7" stroke-linejoin="round"/>
+<path d="M55 56h91l-12 94q-35 12-67 0z" fill="#ac4036" stroke="#77362c" stroke-width="3"/>
+<path d="M68 60l9 83" fill="none" stroke="#cf6855" stroke-width="7"/>
+<ellipse cx="100" cy="54" rx="48" ry="10" fill="#f8ede0" stroke="#77362c" stroke-width="3"/>
+<ellipse cx="100" cy="52" rx="35" ry="4" fill="#d9c3aa"/>
+<circle cx="103" cy="105" r="22" fill="#f4d673"/><path d="M91 104h24m-20-7h16m-16 14h16" stroke="#8c3a2e" stroke-width="4" stroke-linecap="round"/></symbol><symbol id="fries" viewBox="0 0 200 180"><ellipse cx="98" cy="162" rx="60" ry="8" fill="#322019" opacity=".1"/>
+<g fill="#f5c559" stroke="#bf8634" stroke-width="2"><path d="M54 105l-6-75 14-2 10 78z"/><path d="M74 103l-3-87 15-1 3 91z"/><path d="M94 104l4-81 15 1-5 83z"/><path d="M113 106l12-85 15 4-14 86z"/><path d="M127 112l21-66 13 5-20 63z"/></g>
+<path d="M41 80q55 26 113 0l-12 70q-44 19-88 0z" fill="#b54a3c" stroke="#77362c" stroke-width="3"/>
+<path d="M62 107l5 29" stroke="#d8735a" stroke-width="7" stroke-linecap="round"/>
+<circle cx="103" cy="126" r="17" fill="#f4d673"/><path d="M95 126h16m-13-6h10m-10 12h10" stroke="#8c3a2e" stroke-width="3.5" stroke-linecap="round"/></symbol></defs>
+<ellipse cx="304" cy="188" rx="211" ry="138" fill="#efe1bf"/>
+<ellipse cx="304" cy="188" rx="211" ry="138" fill="url(#dots)"/>
+<ellipse cx="300" cy="285" rx="186" ry="28" fill="#cbb291" opacity=".35"/>
+<path d="M119 243q175-43 354 0l-22 50q-160 30-310-3z" fill="#f6eddc" stroke="#b99c76" stroke-width="3"/>
+<path d="M131 245q169-29 330 0" stroke="#d6bf98" stroke-width="2"/>
+<use href="#drink" x="326" y="65" width="169" height="204" transform="rotate(9 410 174)"/>
+<use href="#fries" x="234" y="82" width="173" height="196" transform="rotate(-8 309 178)"/>
+<use href="#burger" x="113" y="129" width="255" height="199"/>
+<g transform="translate(40 95) rotate(-12)"><rect width="112" height="63" rx="13" fill="#fcf9f0" stroke="#927356" stroke-width="2"/><circle cx="25" cy="31" r="13" fill="#678268"/><path d="M19 31l4 4 8-9" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 25h45m-45 13h30" stroke="#9e8c72" stroke-width="5" stroke-linecap="round"/></g>
+<g transform="translate(450 219) rotate(9)"><circle cx="30" cy="30" r="41" fill="#ae4437"/><circle cx="30" cy="30" r="34" stroke="#edcc9e" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M15 33l10 10 22-27" stroke="#fff0cc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M472 77v19m-10-9h20M93 215v16m-8-8h16" stroke="#a44736" stroke-width="3" stroke-linecap="round"/>
+<path d="M389 34q35-9 51 15m-2-12 3 14-14-2" stroke="#7b7d55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,69 @@
+{
+  "source": "official-mcp-via-local-http-ui",
+  "recordType": "sanitized-normalized-response-extract",
+  "historicalOnly": true,
+  "readOnly": true,
+  "performedAt": "2026-10-13T02:26:46.959Z",
+  "finishedAt": "2026-10-13T02:26:50.283Z",
+  "timeZone": "Asia/Shanghai",
+  "location": { "city": "上海", "keyword": "人民广场", "fulfillment": "到店自取" },
+  "store": {
+    "code": "1450713",
+    "name": "麦当劳上海黄浦华旭国际大厦餐厅",
+    "address": "南京东路街道西藏中路336号"
+  },
+  "businessToolsCalled": ["query-nearby-stores", "query-meals", "query-meal-detail", "calculate-price"],
+  "search": { "receivedAt": "2026-10-13T02:26:48.473Z", "count": 5 },
+  "menu": { "receivedAt": "2026-10-13T02:26:48.819Z", "count": 94 },
+  "selections": [
+    {
+      "code": "9900008094",
+      "name": "吉士蛋麦满分组合",
+      "quantity": 1,
+      "choices": [
+        { "round": "1", "code": "5888", "name": "吉士蛋麦满分" },
+        { "round": "2", "code": "521327", "name": "鲜萃冰咖" }
+      ]
+    },
+    {
+      "code": "9900008751",
+      "name": "可乐",
+      "quantity": 1,
+      "choices": [{ "round": "1", "code": "3000", "name": "可乐小杯" }]
+    }
+  ],
+  "quotes": [
+    {
+      "receivedAt": "2026-10-13T02:26:49.266Z",
+      "expiresAt": "2026-10-13T02:28:49.267Z",
+      "request": { "budgetCents": 2500, "people": 1, "totalBudgetCents": 2500 },
+      "lines": [{ "code": "9900008094", "quantity": 1, "subtotalCents": 1200, "originalSubtotalCents": 1200 }],
+      "payableCents": 1200,
+      "originalCents": 1200,
+      "discountCents": 0,
+      "productCents": 1200,
+      "adjustmentCents": 0,
+      "withinBudget": true,
+      "remainingCents": 1300
+    },
+    {
+      "receivedAt": "2026-10-13T02:26:49.705Z",
+      "expiresAt": "2026-10-13T02:28:49.706Z",
+      "request": { "budgetCents": 2500, "people": 1, "totalBudgetCents": 2500 },
+      "lines": [
+        { "code": "9900008094", "quantity": 1, "subtotalCents": 1200, "originalSubtotalCents": 1200 },
+        { "code": "9900008751", "quantity": 1, "subtotalCents": 950, "originalSubtotalCents": 950 }
+      ],
+      "payableCents": 2150,
+      "originalCents": 2150,
+      "discountCents": 0,
+      "productCents": 2150,
+      "adjustmentCents": 0,
+      "withinBudget": true,
+      "remainingCents": 350
+    }
+  ],
+  "comparison": { "payableDifferenceCents": 950, "sameBasket": false, "note": "额外可乐增加支出，不是优惠或推荐加餐。" },
+  "checks": { "explicitUserActions": true, "officialQuoteSucceeded": true, "savedComparisonInPageMemory": true, "desktopAndMobileViewport": true },
+  "limitations": "仅该门店该时段两篮原配方核价；非官方原始响应全文。未查询个人券、未领取、未下单或支付。报价已过期。"
+}

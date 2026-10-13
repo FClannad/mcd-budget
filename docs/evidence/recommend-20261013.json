@@ -1,0 +1,109 @@
+{
+  "source": "official-mcp-via-local-http-ui",
+  "readOnly": true,
+  "timeZone": "Asia/Shanghai",
+  "receivedAt": "2026-10-13T11:13:15.938Z",
+  "expiresAt": "2026-10-13T11:15:14.680Z",
+  "historicalOnly": true,
+  "note": "2026-10-13 19:13 北京时间的最小脱敏实测摘要，非原始响应、非合成 fixture、非订单；报价已过期，不保证现在的售价、可售性或全菜单最低价。",
+  "store": {
+    "code": "1450713",
+    "name": "麦当劳上海黄浦华旭国际大厦餐厅",
+    "address": "南京东路街道西藏中路336号"
+  },
+  "fulfillment": "到店自取 · 非预约",
+  "request": {
+    "budgetCents": 2500,
+    "totalBudgetCents": 2500,
+    "people": 1,
+    "mainKind": "any",
+    "wantDrink": true,
+    "useCoupons": true
+  },
+  "menu": {
+    "count": 113,
+    "receivedAt": "2026-10-13T11:13:12.373Z",
+    "expiresAt": "2026-10-13T11:18:12.375Z"
+  },
+  "plans": [
+    {
+      "title": "精选超值随心配",
+      "items": [{"name": "精选超值随心配", "quantity": 1, "options": ["高达吉士双牛堡", "阳光柠檬红茶中杯"]}],
+      "payableCents": 1390,
+      "originalCents": 1390,
+      "discountCents": 0,
+      "withinBudget": true,
+      "coupon": null
+    },
+    {
+      "title": "人气经典随心配",
+      "items": [{"name": "人气经典随心配", "quantity": 1, "options": ["高达吉士双牛堡", "可乐麦炫酷"]}],
+      "payableCents": 1390,
+      "originalCents": 1390,
+      "discountCents": 0,
+      "withinBudget": true,
+      "coupon": null
+    },
+    {
+      "title": "大堡口福三件套",
+      "items": [{"name": "大堡口福三件套", "quantity": 1, "options": ["培根芝士双牛堡", "中薯条", "可乐中杯"]}],
+      "payableCents": 2390,
+      "originalCents": 2390,
+      "discountCents": 0,
+      "withinBudget": true,
+      "coupon": null
+    },
+    {
+      "title": "麦香鸡 + 纯悦",
+      "items": [{"name": "麦香鸡", "quantity": 1, "options": []}, {"name": "纯悦", "quantity": 1, "options": []}],
+      "payableCents": 2450,
+      "originalCents": 2450,
+      "discountCents": 0,
+      "withinBudget": true,
+      "coupon": null
+    }
+  ],
+  "overBudget": [
+    {"title": "麦辣鸡腿汉堡 + 纯悦", "payableCents": 3000, "withinBudget": false},
+    {"title": "麦香鱼 + 纯悦", "payableCents": 3000, "withinBudget": false}
+  ],
+  "minimumVerifiedCents": 1390,
+  "couponOffers": [
+    {
+      "title": "新人专享-中杯美式7折",
+      "products": ["美式中杯"],
+      "validityText": "2026-10-10 00:00:00-2026-11-08 23:59:59",
+      "status": "quoted",
+      "lowestMealCents": 3030,
+      "withinBudget": false,
+      "couponComparison": null,
+      "comparisonToCheapestCents": 1640
+    },
+    {
+      "title": "新人专享-中杯奶铁7折",
+      "products": ["奶铁中杯"],
+      "validityText": "2026-10-10 00:00:00-2026-11-08 23:59:59",
+      "status": "quoted",
+      "lowestMealCents": 3170,
+      "withinBudget": false,
+      "couponComparison": null,
+      "comparisonToCheapestCents": 1780
+    }
+  ],
+  "coverage": {
+    "menuItems": 113,
+    "details": 11,
+    "plainCandidates": 13,
+    "couponCandidates": 2,
+    "attemptedQuotes": 10,
+    "successfulQuotes": 8,
+    "upstreamCalls": 22,
+    "limited": true
+  },
+  "warnings": [
+    "2 个候选未取得完整有效的官方核价（包括缺餐品的零价返回），未参与排序。",
+    "两张券均没有有效的相同餐单无券基线，不能据此报告券的增量节省额；与最低方案的差额来自不同餐单。"
+  ],
+  "browser": "Chrome/155.0.8059.39",
+  "screenshots": ["docs/screenshots/recommend-desktop-20261013.png", "docs/screenshots/recommend-mobile-20261013.png"]
+}

@@ -1,0 +1,112 @@
+{
+  "source": "demo",
+  "sourceLabel": "固定演示数据 · 非真实门店、菜单、价格或优惠",
+  "store": {
+    "id": "demo-corner",
+    "name": "街角演示餐厅",
+    "orderType": "pickup"
+  },
+  "items": [
+    {
+      "id": "demo-chicken",
+      "name": "香酥鸡腿堡",
+      "category": "main",
+      "kind": "chicken",
+      "priceCents": 1600
+    },
+    {
+      "id": "demo-fish",
+      "name": "酥脆鳕鱼堡",
+      "category": "main",
+      "kind": "fish",
+      "priceCents": 1800
+    },
+    {
+      "id": "demo-beef",
+      "name": "芝士牛肉堡",
+      "category": "main",
+      "kind": "beef",
+      "priceCents": 1900
+    },
+    {
+      "id": "demo-double",
+      "name": "双层牛肉堡",
+      "category": "main",
+      "kind": "beef",
+      "priceCents": 2400
+    },
+    {
+      "id": "demo-soda",
+      "name": "清爽汽水",
+      "category": "drink",
+      "kind": "soda",
+      "priceCents": 600
+    },
+    {
+      "id": "demo-tea",
+      "name": "冰柠檬茶",
+      "category": "drink",
+      "kind": "tea",
+      "priceCents": 700
+    },
+    {
+      "id": "demo-juice",
+      "name": "香橙果汁",
+      "category": "drink",
+      "kind": "juice",
+      "priceCents": 900
+    },
+    {
+      "id": "demo-fries",
+      "name": "金黄小薯条",
+      "category": "side",
+      "kind": "fries",
+      "priceCents": 800
+    },
+    {
+      "id": "demo-nuggets",
+      "name": "酥脆鸡块",
+      "category": "side",
+      "kind": "nuggets",
+      "priceCents": 1000
+    }
+  ],
+  "coupons": [
+    {
+      "id": "demo-30-5",
+      "name": "演示满30减5",
+      "minSpendCents": 3000,
+      "discountCents": 500,
+      "storeIds": [
+        "demo-corner"
+      ],
+      "orderTypes": [
+        "pickup"
+      ]
+    },
+    {
+      "id": "demo-45-8",
+      "name": "演示满45减8",
+      "minSpendCents": 4500,
+      "discountCents": 800,
+      "storeIds": [
+        "demo-corner"
+      ],
+      "orderTypes": [
+        "pickup"
+      ]
+    },
+    {
+      "id": "demo-60-12",
+      "name": "演示满60减12",
+      "minSpendCents": 6000,
+      "discountCents": 1200,
+      "storeIds": [
+        "demo-corner"
+      ],
+      "orderTypes": [
+        "pickup"
+      ]
+    }
+  ]
+}

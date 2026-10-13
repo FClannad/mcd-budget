@@ -1,0 +1,23 @@
+{
+  "name": "mcd-budget",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "麦麦不超支：预算约束、凑单反事实比较与只读 MCP 工作台",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "demo": "node scripts/plan.mjs --budget 25 --drink",
+    "mcp:inspect": "node scripts/mcp.mjs inspect",
+    "mcp:call": "node scripts/mcp.mjs call",
+    "check": "node scripts/check-release.mjs",
+    "test:browser": "node scripts/browser-check.mjs && node scripts/live-browser-check.mjs && node scripts/recommend-browser-check.mjs",
+    "test:browser:live": "node scripts/live-browser-check.mjs",
+    "test:browser:recommend": "node scripts/recommend-browser-check.mjs"
+  },
+  "license": "MIT"
+}

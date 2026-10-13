@@ -1,0 +1,26 @@
+[
+  {
+    "path": "docs/upstream/mcp-README.md",
+    "source": "https://raw.githubusercontent.com/M-China/mcd-mcp-server/main/README.md",
+    "retrievedOn": "2026-10-10",
+    "sha256": "03c3cd6a8d31b7b79eb4d8204929e3fe766fc213f19677acc4c08ccabca26536"
+  },
+  {
+    "path": "docs/upstream/contest-README.md",
+    "source": "https://raw.githubusercontent.com/M-China/mcd-developer-innovation-challenge/main/README.md",
+    "retrievedOn": "2026-10-10",
+    "sha256": "afca3d7c709975bd60a6d1f8268ca08c8d009f7c406b75da10eecb7b80dd143f"
+  },
+  {
+    "path": "docs/upstream/activityGuidelines.md",
+    "source": "https://raw.githubusercontent.com/M-China/mcd-developer-innovation-challenge/main/activityGuidelines.md",
+    "retrievedOn": "2026-10-10",
+    "sha256": "bfb8647e133a0ad16eb7e76219a3718222d2c9809913251659f7d4f2d7271c15"
+  },
+  {
+    "path": "CONTEST_DECLARATION.md",
+    "source": "https://raw.githubusercontent.com/M-China/mcd-developer-innovation-challenge/main/CONTEST_DECLARATION.md",
+    "retrievedOn": "2026-10-10",
+    "sha256": "cd28101bcb29cc8fb24b372fe91ce6b42c4a1487a54e01f7ade0c8c6a84241b7"
+  }
+]
