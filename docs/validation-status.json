@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-13",
+  "lastUpdated": "2026-10-14",
   "lastLiveConnectionAt": "2026-10-12T02:36:39.860Z",
   "liveMcpConnected": true,
   "liveToolsDiscovered": 6,
@@ -15,5 +15,8 @@
   "offlineBrowserChecksPassed": 50,
   "liveStoreCode": "1450713",
   "workbuddyUsed": false,
-  "note": "真实浏览器和本地 HTTP 已完成单店闭环；早餐手动历史报价 1200/2150 分，晚间自动预算内 1390/1390/2390/2450 分；两张咖啡券的餐单核价 3030/3170 分，超预算且无有效同餐单无券基线，不虚构节省。所有历史报价已过期，不保证可售或锁价。未读取全账户券包，未领券、下单或支付，未发布报名，无 WorkBuddy 开发记录。详见 LIVE_VALIDATION.md。"
+  "publicRepository": "https://github.com/FClannad/mcd-budget",
+  "codePublished": true,
+  "contestIssueSubmitted": false,
+  "note": "真实浏览器和本地 HTTP 已完成单店闭环；早餐手动历史报价 1200/2150 分，晚间自动预算内 1390/1390/2390/2450 分；两张咖啡券的餐单核价 3030/3170 分，超预算且无有效同餐单无券基线，不虚构节省。所有历史报价已过期，不保证可售或锁价。未读取全账户券包，未领券、下单或支付；代码已发布至 GitHub，尚未提交报名 Issue，无 WorkBuddy 开发记录。详见 LIVE_VALIDATION.md。"
 }
